@@ -1,4 +1,7 @@
 spring:
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
   application:
     name: gateway-service
   cloud:
@@ -8,4 +11,11 @@ spring:
       retry:
         maxAttempts: 200
         maxInterval: 10000
-      uri: http://localhost:8180   
+      uri: http://localhost:8180
+# spring:
+#   application:
+#     name: gateway-service
+#   cloud:
+#     config:
+#       enabled: true
+#       uri: http://${HOSTNAME:localhost}:8081
